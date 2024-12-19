@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Aritmatika</title>
+    <script>
+        function hitung(){
+            let strBil1 = document.getElementById("Bil1").value; // ambil nilai id=bil1
+            let strBil2 = document.getElementById("Bil2").value; // ambil nilai id=bil2
+            let operator = document.getElementById("operator").value; // ambil nilai operator
+
+            let bil1 = parseFloat(strBil1); //konversi nilai sring ke angka
+            let bil2 = parseFloat(strBil2); //konversi nilai sring ke angka
+            let hasil;
+
+            switch (operator) {
+                case "+":
+                    hasil = bil1 + bil2; // penjumlahan
+                    break;
+                case "-":
+                    hasil = bil1 - bil2; // pengurangan
+                    break;
+                case "*":
+                    hasil = bil1 * bil2; // perkalian
+                    break;
+                case "/":
+                    hasil = bil1 / bil2; // pembagian
+                    break;
+                default:
+                    hasil = "Operator tidak Valid"; // Memvalidasi opeator
+            }
+            document.getElementById("hasil").innerHTML = hasil; // cetak hasilnya
+        }
+    </script>
+</head>
+<body>
+    <h2>Kalkulator Aritmatika</h2>
+    <form>
+        Bilangan 1 : <input type="text" name="" id="Bil1">
+        <br>
+        Bilangan 2 : <input type="text" name="" id="Bil2">
+        <br>
+        Operator :
+        <select name="" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <input type="button" value="Hitung" onclick="hitung()">
+        <br>
+        Hasil Operasi : <span id="hasil"></span>
+    </form>
+</body>
+</html>

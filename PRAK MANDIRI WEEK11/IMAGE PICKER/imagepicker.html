@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prak Image Picker</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h1>Tentukan Hewan</h1>
+    <label for="imageSelector">Pilih Satu:</label>
+    <select id="imageSelector" onchange="displayImage()">
+        <option value="">--Pilih--</option>
+        <option value="ayam.jpg">Ayam</option>
+        <option value="sapi.jpeg">Sapi</option>
+        <option value="kambing.webp">Kambing</option>
+        <option value="gorila.jpg">Gorila</option>
+        <option value="bekantan.jpg">Bekantan</option>
+    </select>
+    <div id="imageContainer">
+        <img id="displayedImage" src="" alt="" style="display: none;">
+    </div>
+    <script src="image.js"></script>
+</body>
+</html>
